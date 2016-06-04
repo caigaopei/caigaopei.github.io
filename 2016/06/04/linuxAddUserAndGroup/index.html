@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="First Morning">
 <meta property="og:description" content="/etc/group 存储当前系统中所有用户信息Group:     X      : 123  :  abc,def,xyz组名 : 组密码占位符 : 组编号: 组中的用户类表PS: 系统用户”root”组号一定是”0”,组号1~499为系统预留组编号.用户手动创建的组是 &amp;gt;=500     
 /etc/gshadow 存储当前系统中用户组的密码信息Group : *   :">
-<meta property="og:updated_time" content="2016-06-04T13:14:06.000Z">
+<meta property="og:updated_time" content="2016-06-04T13:17:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linuxAddUserAndGroup">
 <meta name="twitter:description" content="/etc/group 存储当前系统中所有用户信息Group:     X      : 123  :  abc,def,xyz组名 : 组密码占位符 : 组编号: 组中的用户类表PS: 系统用户”root”组号一定是”0”,组号1~499为系统预留组编号.用户手动创建的组是 &amp;gt;=500     
@@ -246,7 +246,7 @@
 <p><strong>修改用户个人文件目录</strong><br><code>usermod -d /home/cls cls</code>  </p>
 <p><strong>切换用户组</strong><br><code>usermod -g sexy(组) sdf(用户)</code></p>
 <p><strong>删除用户</strong><br><code>userdel -r(循环) sdf</code></p>
-<p><strong>除了root以外,其他用户无法登陆系统</strong><br><code>touch /etc/nologin  (内容无关紧要)</code></p>
+<p><strong>除了root以外,其他用户无法登陆系统</strong><br><code>touch /etc/nologin  (内容无关紧要)</code><br><a id="more"></a></p>
 <h2 id="用户和用户组的进阶命令"><a href="#用户和用户组的进阶命令" class="headerlink" title="用户和用户组的进阶命令"></a>用户和用户组的进阶命令</h2><p><strong>锁定用户账号</strong><br><code>passwd -l cls(用户名)</code><br><strong>解锁账户</strong><br><code>passwd -u cls(同上)</code><br><strong>清除账号密码</strong><br><code>passwd　-d　cls(同上)</code><br><strong>将用户添加到附属组</strong><br><code>gpasswd -a cls(用户名) boss(组名)</code><br><strong>临时切换用户组</strong><br><code>newgrp boss</code><br><strong>将用户踢出附属组</strong><br><code>gpasswd -d cls boss</code><br><strong>新建用户添加到主要组合附属组</strong><br><code>useradd -g boss(主要组) -G group1,group2(附属组)....</code><br><strong>添加组密码</strong><br><code>gpasswd boss(组名)</code></p>
 <blockquote>
 <p>其他命令  </p>
@@ -259,20 +259,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/06/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
