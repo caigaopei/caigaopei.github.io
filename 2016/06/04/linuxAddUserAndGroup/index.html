@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="First Morning">
 <meta property="og:description" content="/etc/group 存储当前系统中所有用户信息Group:     X      : 123  :  abc,def,xyz组名 : 组密码占位符 : 组编号: 组中的用户类表PS: 系统用户”root”组号一定是”0”,组号1~499为系统预留组编号.用户手动创建的组是 &amp;gt;=500     
 /etc/gshadow 存储当前系统中用户组的密码信息Group : *   :">
-<meta property="og:updated_time" content="2016-06-04T13:22:49.000Z">
+<meta property="og:updated_time" content="2016-06-04T16:35:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux添加组员相关命令">
 <meta name="twitter:description" content="/etc/group 存储当前系统中所有用户信息Group:     X      : 123  :  abc,def,xyz组名 : 组密码占位符 : 组编号: 组中的用户类表PS: 系统用户”root”组号一定是”0”,组号1~499为系统预留组编号.用户手动创建的组是 &amp;gt;=500     
@@ -239,9 +239,8 @@
       
         <h2 id="etc-group-存储当前系统中所有用户信息"><a href="#etc-group-存储当前系统中所有用户信息" class="headerlink" title="/etc/group 存储当前系统中所有用户信息"></a>/etc/group 存储当前系统中所有用户信息</h2><p>Group:     X      : 123  :  abc,def,xyz<br>组名 : 组密码占位符 : 组编号: 组中的用户类表<br>PS: 系统用户”root”组号一定是”0”,组号1~499为系统预留组编号.<br>用户手动创建的组是 &gt;=500     </p>
 <h2 id="etc-gshadow-存储当前系统中用户组的密码信息"><a href="#etc-gshadow-存储当前系统中用户组的密码信息" class="headerlink" title="/etc/gshadow 存储当前系统中用户组的密码信息"></a>/etc/gshadow 存储当前系统中用户组的密码信息</h2><p>Group : *   :           : abc,def,xyz<br>组名称: 组密码 : 组管理者 : 组中用户名列表  </p>
-<h2 id="etc-passwd-存储当前系统中所有用户的信息"><a href="#etc-passwd-存储当前系统中所有用户的信息" class="headerlink" title="/etc/passwd 存储当前系统中所有用户的信息"></a>/etc/passwd 存储当前系统中所有用户的信息</h2><p>user : x    : 123   : 456 : xxxxxxxxx :/home/user : /bin/bash<br>用户名 : 密码占位符: 用户编号: 用户组编号: 用户注释信息: 用户主目录 :shell类型    </p>
+<h2 id="etc-passwd-存储当前系统中所有用户的信息"><a href="#etc-passwd-存储当前系统中所有用户的信息" class="headerlink" title="/etc/passwd 存储当前系统中所有用户的信息"></a>/etc/passwd 存储当前系统中所有用户的信息</h2><p>user : x    : 123   : 456 : xxxxxxxxx :/home/user : /bin/bash<br>用户名 : 密码占位符: 用户编号: 用户组编号: 用户注释信息: 用户主目录 :shell类型<br><a id="more"></a></p>
 <h2 id="etc-shadow-存储当前系统中所有用户的密码信息"><a href="#etc-shadow-存储当前系统中所有用户的密码信息" class="headerlink" title="/etc/shadow 存储当前系统中所有用户的密码信息"></a>/etc/shadow 存储当前系统中所有用户的密码信息</h2><p>bin:*:15980:0:99999:7:::<br>用户名: 密码 :::::    </p>
-<a id="more"></a>
 <h2 id="用户和用户组的基本命令"><a href="#用户和用户组的基本命令" class="headerlink" title="用户和用户组的基本命令"></a>用户和用户组的基本命令</h2><p><code>groupadd sexy</code> –添加用户组  添加到/etc/group<br><code>groupmod -n(要修改的用户组名称) market(新组名称) sexy(源)</code><br><code>groupmod -g 668 market</code> –更改组编号<br><code>groupadd -g 888 boss</code> –直接创建用户组并且指定组编号<br><code>groupdel market</code> –删除用户组<br><code>useradd -g sexy sdf(用户名:史蒂夫)</code><br><code>useradd -d /home/xxx cjk</code> (创建用户苍井空,指定用户初始文件夹)<br><strong>用户添加备注</strong><br><code>usermod -c dgdzmx(新) sdf</code></p>
 <p><strong>修改用户名</strong><br><code>usermod -l cls(新) sdf</code> </p>
 <p><strong>修改用户个人文件目录</strong><br><code>usermod -d /home/cls cls</code>  </p>
@@ -260,20 +259,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/06/05/GoodJob/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          GoodJob
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
