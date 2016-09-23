@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.iteye.com/fuhuijun/schema/create"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.iteye.com/fuhuijun/schema/create"
+		elementFormDefault="qualified"
+		attributeFormDefault="unqualified">
+
+	<xsd:element name="user">
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[元素功能描述:创建用户对象]]></xsd:documentation>
+		</xsd:annotation>
+		
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[自定义类型属性：字符串类型]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="userName" type="xsd:string" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[自定义类型属性：字符串类型]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="age" type="xsd:integer" use="required">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[自定义类型属性：数字类型]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="address" type="xsd:string" use="optional" default="china">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[自定义类型属性：字符串类型]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="customerType">
+		<xsd:attribute name="type" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[自定义类型属性：包含以下枚举]]></xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="enu1"/>
+					<xsd:enumeration value="enu2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="expression" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[自定义类型属性：字符串类型]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+</xsd:schema>
